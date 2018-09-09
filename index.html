@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+		<title>Obligatorio</title>
+		<script type="text/javascript" src="js/jquery-2.1.3.js"></script>
+		<script type="text/javascript" src="js/modelo.js"></script>
+		<link href="css/estilos.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+	<div id = "principal">
+		<div id = "cabezal">
+			<div id ="logo">
+			<img id="imglogo" alt="imagenLogo" src="img/logo.png">
+			</div>
+		</div>
+		<div id = "lateral">
+			<div id = "bot">
+				<img id="btnFuncionario" alt='botonFuncionario' src="img/btnFuncionarioOriginal.png">
+				<img id="btnConcepto" alt ='botonConcepto' src="img/btnConceptoOriginal.png">
+				<img id="btnLiquidacion" alt ='botonLiquidacion' src="img/btnLiquidacionOriginal.png">
+				<img id="btnSueldos" alt ='botonSueldos' src="img/btnSueldosOriginal.png">
+				<img id="btnDinero" alt ='botonDinero' src="img/btnDineroOriginal.png">
+			</div>
+		</div>
+		
+		<div id = "contenido">
+			<div id = "altaFuncionario" class="esconder" >
+				<h3>Registro Funcionario</h3>
+					<table id="tblForm" class = "estiloForm">
+						<tr>
+							<td>
+								<label for="txtNumero" id="lblName">N&uacute;mero funcionario:</label>
+							</td>
+							<td>
+								<input type="text" id="txtNumero" class = fecha >
+							</td>
+							<td id="errNumero" class = "errores">
+								 
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="txtNombre">Nombre:</label>
+							</td>
+							<td>
+								<input id="txtNombre" type="text">
+							</td>
+							<td id="errNombre"  class = "errores">
+								
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="txtApellido ">Apellido: </label>
+							</td>
+							<td>
+								<input id="txtApellido" type="text">
+							</td>
+							<td id="errApellido"  class = "errores">
+								
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="txtDireccion ">Direcci&oacute;n: </label>
+							</td>
+							<td>
+								<input id="txtDireccion"  type="text"  >
+							</td>
+							<td id="errDireccion" class = "errores">
+								
+							</td>	
+						</tr>
+						<tr>
+							<td>
+								<label for="txtSeleccion ">Secci&oacute;n: </label>
+							</td>
+							<td>
+								<select name = "seleccion" id = "txtSeleccion">
+									<option value = "Administracion" >Administraci&oacute;n</option>
+									<option value = "Ventas" >Ventas</option>
+									<option value = "Fabrica" >F&aacute;brica</option>
+									<option value = "Directorio">Directorio</option>
+								</select>
+							</td>
+							<td id="errSeleccion"  class = "errores">
+								
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Fecha: </label>
+							</td>
+							<td>
+								<input id="txtDia"  type="text" class = fecha>
+								/
+								<input id="txtMes"  type="text" class = fecha>
+								/
+								<input id="txtAnio"  type="text" class = fecha>
+							</td>
+							<td id="errFecha"  class = "errores">
+								
+							</td>	
+						</tr>
+						<tr>	
+							<td colspan="3" id="celdaBoton" align="center">
+								<input type="button" value="Alta" id="btnAlta">
+							</td>
+						</tr>
+					</table>
+					<div id = "imagenFuncionario">
+						<img id="imgFun" alt ='imagenFunciona' src="img/avatarRandom.jpg">
+					</div>
+			</div>
+			<div id = "registrarConcepto" class="esconder">
+					<h3>Registro Concepto</h3>
+					<table id="tblConc">
+						<tr>
+							<td>
+								<label for="txtNomConcepto" id="lblNamConcepto" >Nombre del concepto:</label>
+							</td>
+							<td>
+								<input id="txtNomConcepto" value="" >
+							</td>
+							<td id="errConceptoUno">
+							
+							</td>
+						</tr>
+						<tr>	
+							<td>
+								<label id="lblNameConcepto">Dinero:</label>
+							</td>	
+							<td>
+								<form name="formulario" id="formulario" action="12-radio-button-jquery.php" method="POST">
+									<div>
+									<input type="radio" name="dinero" id="radioUno" value="Entrada" checked> 
+									<label for = "radioUno">Entrada</label>
+									<br>
+									<input type="radio" name="dinero" id="radioDos" value="Salida"> 
+									<label for ="radioDos">Salida</label>
+									</div>
+								</form>	
+							</td>
+							<td id="errConceptoDos">
+						
+							</td>
+						<tr>
+							<td colspan="3" id="celdaConcepto" align="center">
+								<input type="button" value="Registrar" id="btnRegConcepto">
+							</td>
+						</tr>
+				</table>
+			</div>
+			<div id = "lineaLiquidacion" class="esconder" >
+				<h3>Ingresar una l&iacute;nea a la liquidaci&oacute;n</h3>
+					<table id="tblLiquida">
+						<tr>
+							<td>
+								<label for="txtFun">Funcionario: </label>
+							</td>
+							<td>
+								<select name = "Fun" id = "txtFun">
+								<option></option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Concepto: </label>
+							</td>
+							<td>
+								<select name = "nameConcep" id = "txtConcep">
+								<option></option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="txtImporte">Importe: </label>
+							</td>
+							<td>
+								<input type="text" id="txtImporte" >
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" id="celdaBtn" align="center">
+								<input type="button" value="Liquidacion" id="btnLiquid">
+							</td>
+						</tr>
+					</table>
+			</div>
+			<div id = "consultaSueldos" class="esconder" >
+				<h3>Consulta de Sueldo</h3>
+				<div id = "imgFunFiltrado">
+						<img id="imagenFun" alt ="imaFuncionario" src="img/avatarRandom.jpg">
+				</div> 
+				<table id = "tblSueldosDos" class ="estiloForm">
+					<tr>
+						<td>
+							<label>Detalle liquidaci&oacute;n de sueldo: </label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<textarea rows="4" cols="30" id ="txtAreaDescripcion"></textarea>
+						</td>
+					</tr>
+				</table>
+				<table id="tblSueldos"  class = "estiloForm">
+					<tr>	
+						<td>
+							<label for="txtSeccion ">Secci&oacute;n: </label>
+						</td>
+						<td>
+							<select name = "secc" id = "txtSeccion">
+								<option value="Administracion"> Administraci&oacute;n </option>
+								<option value="Ventas">Ventas</option>
+								<option value="Fabrica">F&aacute;brica</option>
+								<option value="Directorio">Directorio</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="txtListFun">Funcionario: </label>
+						</td>
+						<td>
+							<select name = "Fun" id = "txtListFun">
+							<option></option>
+							</select>
+						</td>
+					</tr>
+				</table>	
+			</div>
+			<div id = "consultaDinero" class="esconder" >
+				<table id="tblDinero"  class = "estiloForm">
+					<tr>
+						<td>
+							<label for="txtSeccionDin ">Secci&oacute;n: </label>
+						</td>
+						<td>
+							<select name = "seccionDinero" id = "txtSeccionDin">
+								<option value="Administracion"> Administraci&oacute;n </option>
+								<option value="Ventas">Ventas</option>
+								<option value="Fabrica">F&aacute;brica</option>
+								<option value="Directorio">Directorio</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				<div id="tablistado">
+					
+				</div>
+			</div>		
+		</div>	
+		<div id = "pie"><div id = "spie">Taller Programaci&oacute;n 1</div></div>
+	</div>
+	</body>
+</html>
